@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+
+    <title>Document</title>
+</head>
+<body style="background-color: #000000">
+
+    <div class="top_project">
+        <h2>Industrial Design Club</h2>
+        <p><span class="orange">Poster design </span>  for the Industrial Design Club for the annual tech fest Vashsisht'22 </p>
+    </div>
+   
+
+<!---------------------------- Image Slider --------------------------------->
+
+    <div class="container">
+   
+        <div class="project_photo">
+           <img src="/image_gallery/images/IDC_posters/Mix_&_Match.png" onclick="openImgviewer();toSlide(1)" class="hover-shadow preview"  />
+        </div>
+        <div class="project_photo">
+           <img src="/image_gallery/images/IDC_posters/Puzzle_Mania.png" onclick="openImgviewer();toSlide(2)" class="hover-shadow preview"  />
+        </div>
+        <div class="project_photo">
+           <img src="/image_gallery/images/IDC_posters/Abstract.png" onclick="openImgviewer();toSlide(3)" class="hover-shadow preview"  />
+        </div>
+        <div class="project_photo">
+            <img src="/image_gallery/images/IDC_posters/3d_pen.png" onclick="openImgviewer();toSlide(4)" class="hover-shadow preview"  />
+         </div>
+         <div class="project_photo">
+            <img src="/image_gallery/images/IDC_posters/Uncovering_ID.png" onclick="openImgviewer();toSlide(5)" class="hover-shadow preview"  />
+         </div>
+
+
+    </div>
+      
+           
+      <div id="Imgviewer" class="modal">
+        <span class="close pointer" onclick="closeImgviewer()">&times;</span>
+        <div class="modal-content">
+          <div class="slide">
+              <img src="/image_gallery/images/IDC_posters/Mix_&_Match.png" class="image-slide" />
+          </div>
+          <div class="slide">
+              <img src="/image_gallery/images/IDC_posters/Puzzle_Mania.png" class="image-slide"  />
+          </div>    
+          <div class="slide">
+              <img src="/image_gallery/images/IDC_posters/Abstract.png" class="image-slide"  />
+          </div>
+          <div class="slide">
+            <img src="/image_gallery/images/IDC_posters/3d_pen.png" class="image-slide"  />
+        </div>
+        <div class="slide">
+            <img src="/image_gallery/images/IDC_posters/Uncovering_ID.png" class="image-slide"  />
+        </div>
+        
+          <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+          <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        
+
+        </div>
+      </div>
+    
+</body>
+</html>
+
+<script>
+
+let slideIndex = 1;
+showSlide(slideIndex);
+
+
+
+function openImgviewer() {
+  document.getElementById('Imgviewer').style.display = 'block';
+}
+
+function closeImgviewer() {
+  document.getElementById('Imgviewer').style.display = 'none';
+};
+
+
+
+function changeSlide(n) {
+  showSlide(slideIndex += n);
+};
+
+function toSlide(n) {
+  showSlide(slideIndex = n);
+};
+
+
+function showSlide(n) {
+  const slides = document.getElementsByClassName('slide');
+ let modalPreviews = document.getElementsByClassName('modal-preview');
+
+  if (n > slides.length) {
+    slideIndex = 1;	
+  };
+
+  if (n < 1) {
+    slideIndex = slides.length;
+  };
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  };
+  
+  for (let i = 0; i < modalPreviews.length; i++) {
+    modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
+  };
+  
+  slides[slideIndex - 1].style.display = 'block';
+  modalPreviews[slideIndex - 1].className += ' active';
+};
+
+
+</script>
+
+

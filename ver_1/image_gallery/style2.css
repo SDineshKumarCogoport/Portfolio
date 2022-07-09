@@ -1,0 +1,170 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    margin: 0;
+  }
+
+/*--------------- About the project ---------------------*/
+
+.top_project{
+
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    color: aliceblue;
+}
+
+.project_photo{
+    padding-top: 10px;
+}
+
+/*--------------- Image Viewer ---------------------*/
+
+  .preview {
+    width: 100%;
+  }
+
+  .container{
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  
+     
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 10px 62px 0px 62px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  
+
+  
+  .slide {
+    display: none;
+  }
+  
+  .image-slide {
+    width: 100%;
+  }
+  
+  .modal-preview {
+    width: 100%;
+  }
+  
+  img.preview, img.modal-preview {
+    opacity: 0.6;
+  }
+  
+
+
+  img.active,
+  .preview:hover,
+  .modal-preview:hover {
+    opacity: 1;
+  }
+
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  } 
+  
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .previous,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .previous:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  @media screen and (max-width: 600px) {
+    .project_photo{
+        padding-top: 5px;
+    }
+
+    .container{
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    
+    
+  }
+
+
+  .top_project h2{
+    padding-top: 20px;
+    font-family: 'Space Grotesk';
+    color:#ffffff;
+    font-size: 48px;
+    text-transform: uppercase;
+    transform: rotate(90);
+    margin:20px 0
+  }
+
+  .top_project p{
+    font-family: 'Space Grotesk';
+    font-family: 'Space Mono';
+    font-size: 24px;
+    margin:10px 0;
+    padding-bottom: 20px;
+    color: #F04E23;
+  }
+  
+  /* .orange{
+  color: #F04E23;
+  } */
+
+ 

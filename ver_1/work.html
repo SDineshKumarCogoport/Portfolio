@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="style.css" />
+   <title>Document</title>
+ </head>
+ <body style="background-color: #000000">
+
+   <nav class="navbar_w" id="pageheader">
+
+     <!-- LOGO -->
+     <div class="logo_w">
+    <a href="home.html">dK</a>  
+    </div>
+
+     <!-- NAVIGATION MENU -->
+     <ul class="nav-links_w">
+      
+       <input type="checkbox" id="checkbox_toggle" />
+       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+       <!-- NAVIGATION MENU -->
+       <div class="menu_w">
+         <li class="link_active"><a href="#">WORK</a></li>
+      
+         <li><a href="./contact.html">CONTACT</a></li>
+       </div>
+     </ul>
+     
+     </nav>
+
+
+<!-- Photo Grid -->
+<div class="photogrid">
+  <div class="row"> 
+    <div class="column">
+      
+      
+
+      <div class="img-container">
+       <a href="/image_gallery/IDC_posters.html"> <img src="imgs/cover_photo/cp1.png"  class="pimage" style="width:100%">
+        <div class="middle">
+          <div class="ptext"><p1>Industrial Design Club</p1> <br> <br> <br><p2>Poster Design</p2></div>
+        </div>
+      </a>
+      </div>
+      <div class="img-container">
+        <a href="/image_gallery/4Climate.html"> <img src="imgs/cover_photo/cp2.png" style="width:100%" class="pimage">
+         <div class="middle">
+          <div class="ptext"><p1>4Climate</p1> <br>  <br><p2>Concept Design</p2></div>
+         </div>
+       </a>
+       </div>
+
+       <div class="img-container">
+        <a href="/image_gallery/stapler.html"><img src="imgs/cover_photo/cp7.png" style="width:100%" class="pimage">
+         <div class="middle">
+          <div class="ptext"><p1>Stapler</p1> <br>  <br><p2>3D Modelling</p2></div>
+         </div>
+       </a>
+       </div>
+ 
+       <div class="img-container">
+        <a href="https://docs.google.com/presentation/d/1lKa2r9f-Dr5XXqirh0_cNHPUnsJwg09bUnLGRCEePeo/edit?usp=sharing"><img src="imgs/cover_photo/cp8.png" style="width:100%" class="pimage">
+         <div class="middle">
+          <div class="ptext"><p1>Interaction Design Project</p1> </div>
+         </div>
+       </a>
+       </div>
+
+       <div class="img-container">
+        <a href="/image_gallery/irulin_sirai.html"><img src="imgs/cover_photo/cp5.jpeg" style="width:100%" class="pimage">
+         <div class="middle">
+          <div class="ptext"><p1>Irulin Sirai</p1> <br>  <br><p2>Poster Design</p2> </div>
+         </div>
+       </a>
+       </div>
+      
+    </div>
+    <div class="column">
+
+      <div class="img-container">
+        <a href="/image_gallery/csm.html"><img src="imgs/cover_photo/cp3.png" style="width:100%" class="pimage">
+         <div class="middle">
+          <div class="ptext"><p1>Center for Smart Manufacturing</p1> <br>  <br><p2>Identity Design</p2> </div>
+         </div>
+       </a>
+       </div>
+
+       <div class="img-container">
+        <a href="/image_gallery/oxalta.html"><img src="imgs/cover_photo/cp4.png" style="width:100%" class="pimage">
+         <div class="middle">
+          <div class="ptext"><p1>Oxalta</p1> <br>  <br><p2>Concept Bike Design</p2> </div>
+         </div>
+       </a>
+       </div>
+
+       <div class="img-container">
+        <a href="/image_gallery/samgatha_posters.html"><img src="imgs/cover_photo/cp9.png" style="width:100%" class="pimage">
+         <div class="middle">
+          <div class="ptext"><p1>Samgatha</p1><br>  <br> <p2>Poster Design</p2> </div>
+         </div>
+       </a>
+       </div>
+
+       <div class="img-container">
+        <a href="/image_gallery/puri.html"> <img src="imgs/cover_photo/cp6.png" style="width:100%" class="pimage">
+         <div class="middle">
+          <div class="ptext"><p1>Puri</p1><br>  <br> <p2>Product Design</p2> </div>
+         </div>
+       </a>
+       </div>
+
+       <div class="img-container">
+        <a href="/image_gallery/sudals_capture.html"> <img src="imgs/cover_photo/cp10.png" style="width:100%" class="pimage">
+         <div class="middle">
+          <div class="ptext"><p1>Sudals Capture</p1> <br><br><p2>Identity Design</p2> </div>
+         </div>
+       </a>
+       </div>
+      
+      
+    </div>   
+</div>
+
+
+     </body>
+     </html>
+
+     <script>
+
+window.onscroll = function() {sticky()};
+
+var header = document.getElementById("pageheader");
+var sticky = header.offsetTop;
+
+function sticky() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+     </script>
+     
